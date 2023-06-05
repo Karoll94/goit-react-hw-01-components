@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.transaction_history {
+  width: 90%;
+  border-collapse: collapse;
+  box-shadow: 5px 0px 6px rgba(0, 0, 0, 0.1), 
+  -5px 0px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.transaction_history th {
+  background-color: aqua;
+  padding: 10px;
+  border-right: 1px solid rgb(255, 255, 255);
+}
+/* Eliminar línea vertical en el último encabezado de columna */
+.transaction_history th:last-child {
+  border-right: none;
+}
+
+.transaction_history td {
+  text-align: center;
+  padding: 10px;
+  /* Colocar el borde de cada columna */
+  border-right: 1px solid rgb(175, 163, 163);
+}
+
+/* Eliminar línea vertical en el último encabezado de columna */
+.transaction_history td:last-child {
+  border-right: none;
+}
+
+/* color para las filas pares */
+.transaction_history tbody tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+/* borde para la ultima fila */
+.transaction_history tbody tr:last-child {
+  border-bottom: 1px solid black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
