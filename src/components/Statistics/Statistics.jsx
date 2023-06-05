@@ -32,7 +32,7 @@ export const Statistics = () => {
                             //     background: getRandomHexColor(),
                             // };
                             
-                            <li style ={{backgroundColor:getRandomHexColor()}} class={style.item}>
+                            <li style ={{backgroundColor:getRandomHexColor()}} class={style.item} key={dt.id}>
                                 <span className={style.label}>{dt.label}</span>
                                 <span className={style.percentage}>{dt.percentage}%</span> 
                             </li>
@@ -48,7 +48,7 @@ export const Statistics = () => {
 //Definición de los protoTypes
 
 Statistics.propTypes={
-    id: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired
+    id: PropTypes.number,
+    label: PropTypes.string,
+    percentage: PropTypes.number
 }

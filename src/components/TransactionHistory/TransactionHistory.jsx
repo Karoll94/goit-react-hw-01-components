@@ -21,7 +21,7 @@ export const TransactionHistory = () => {
 
                 <tbody className={style}>
                     {data.map((dt) => (
-                        <tr className= {style.data}>
+                        <tr className= {style.data} key={dt.id}>
                             <td>{dt.type}</td>
                             <td>{dt.amount}</td>
                             <td>{dt.currency}</td>
@@ -35,8 +35,8 @@ export const TransactionHistory = () => {
 
 //Definición de los Proptypes
 TransactionHistory.propTypes = {
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
-    currency: PropTypes.string.isRequired
+    id: PropTypes.string,
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string
 };

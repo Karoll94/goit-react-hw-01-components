@@ -12,7 +12,7 @@ export const FriendList = () => {
         <div className={style.container}>
         <ul class={style.friend_list}>
                 {data.map((dt) =>(
-                    <li className={style.item}>
+                    <li className={style.item} key={dt.id}>
                         <span
                             className={`${style.status} ${
                             dt.isOnline
@@ -29,4 +29,10 @@ export const FriendList = () => {
     )
 }
 
-               
+//Definicion de los PropTypes
+FriendList.prototype = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
+    id: PropTypes.number
+}
