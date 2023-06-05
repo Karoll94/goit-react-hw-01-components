@@ -5,7 +5,6 @@ import style from './FriendList.module.css';
 //Importación del Json
 import data from '../../data/friends.json';
 
-
 //Creación del marcado HTML de la lista de los amigos
 export const FriendList = () => {
     return (
