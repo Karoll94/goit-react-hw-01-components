@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 //importación de los Estilos
 import style from './TransactionHistory.module.css';
 //Importación del Json
-import data from '../../data/transactions.json';
+// import data from '../../data/transactions.json';
 
 
 //Creación de la función y su marcado HTML
-export const TransactionHistory = () => {
+export const TransactionHistory = ({transaction}) => {
     return(
         <div className={style.container}>
             <table className={style.transaction_history}>
@@ -20,7 +20,7 @@ export const TransactionHistory = () => {
                 </thead>
 
                 <tbody className={style}>
-                    {data.map((dt) => (
+                    {transaction.map((dt) => (
                         <tr className= {style.data} key={dt.id}>
                             <td>{dt.type}</td>
                             <td>{dt.amount}</td>

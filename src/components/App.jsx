@@ -16,21 +16,24 @@ const styleTest = {
   color: '#010101',
 }
 
-
-export const App = ({user,statistics}) => {
+// Se llama como props la varible data que posee todos los atributos del
+// user.Json. 
+export const App = ({data, percentage, avatar, amount}) => {
   return (
     <>
       <div style={styleTest}>
-        <Perfil user/>
+        {/* En la etiqueta perfil se declara una variable avatar que guardará
+        los props y se llamaran en el componente Perfil */}
+        <Perfil avatar={data}/> 
       </div>
       <div>
-        <Statistics data/>
+        <Statistics data ={percentage}/>
       </div>
       <div>
-        <FriendList friends/>
+        <FriendList friend ={avatar}/>
       </div>
       <div>
-        <TransactionHistory transactions/>
+        <TransactionHistory transaction = {amount}/>
       </div>
     </>
   );

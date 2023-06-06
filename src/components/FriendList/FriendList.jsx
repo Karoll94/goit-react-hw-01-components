@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 //importación de los Estilos
 import style from './FriendList.module.css';
 //Importación del Json
-import data from '../../data/friends.json';
+// import data from '../../data/friends.json';
 
 //Creación del marcado HTML de la lista de los amigos
-export const FriendList = () => {
+export const FriendList = ({friend}) => {
     return (
         <div className={style.container}>
             <ul className={style.friend_list}>
-                    {data.map((dt) =>(
+                    {friend.map((dt) =>(
                         <li className={style.item} key={dt.id}>
                             <span
                                 className={`${style.status} ${

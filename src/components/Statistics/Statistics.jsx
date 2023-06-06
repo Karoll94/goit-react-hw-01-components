@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 //importación de los Estilos
 import style from './Statistics.module.css';
 //Importación del Json
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 // import getRandomHexColor from '../../components/ColorRandom/colorRandom';
 
 
@@ -17,7 +17,7 @@ function getRandomHexColor() {
   
 //Crear función que generará marcado HTML
 //de la tarjeta de estadisticas
-export const Statistics = () => {
+export const Statistics = ({data}) => {
     return(
       
             <section className={style.statistics}>
