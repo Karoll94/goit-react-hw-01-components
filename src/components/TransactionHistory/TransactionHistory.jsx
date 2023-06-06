@@ -10,7 +10,7 @@ import data from '../../data/transactions.json';
 export const TransactionHistory = () => {
     return(
         <div className={style.container}>
-            <table class={style.transaction_history}>
+            <table className={style.transaction_history}>
                 <thead className={style.title}>
                     <tr className= {style.title_item}>
                         <th>Type</th>

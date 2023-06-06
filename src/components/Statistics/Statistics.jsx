@@ -20,24 +20,23 @@ function getRandomHexColor() {
 export const Statistics = () => {
     return(
       
-            <section class={style.statistics}>
+            <section className={style.statistics}>
                   <div className={style.maxWidth}>
                     <div className={style.divTitle}>
-                        <h2 class={style.title}>Upload stats</h2>
+                        <h2 className={style.title}>Upload stats</h2>
                     </div>
 
-                    <ul class={style.stat_list}>
+                    <ul className={style.stat_list}>
                         {data.map((dt) => (
                             // const backgroundColor = {
                             //     background: getRandomHexColor(),
                             // };
                             
-                            <li style ={{backgroundColor:getRandomHexColor()}} class={style.item} key={dt.id}>
+                            <li style ={{backgroundColor:getRandomHexColor()}} className={style.item} key={dt.id}>
                                 <span className={style.label}>{dt.label}</span>
                                 <span className={style.percentage}>{dt.percentage}%</span> 
                             </li>
-                            
-    ))} 
+                        ))} 
                     </ul>
                 </div>
             </section>

@@ -9,21 +9,21 @@ import data from '../../data/friends.json';
 export const FriendList = () => {
     return (
         <div className={style.container}>
-        <ul class={style.friend_list}>
-                {data.map((dt) =>(
-                    <li className={style.item} key={dt.id}>
-                        <span
-                            className={`${style.status} ${
-                            dt.isOnline
-                                ? style["status--active"]
-                                : style["status--inactive"]
-                            }`}
-                        />
-                        <img class={style.avatar} src= {dt.avatar} alt="User avatar" width="48" />
-                        <p className={style.name}>{dt.name}</p>
-                    </li>
-                ))}
-        </ul>
+            <ul className={style.friend_list}>
+                    {data.map((dt) =>(
+                        <li className={style.item} key={dt.id}>
+                            <span
+                                className={`${style.status} ${
+                                dt.isOnline
+                                    ? style["status--active"]
+                                    : style["status--inactive"]
+                                }`}
+                            />
+                            <img className={style.avatar} src= {dt.avatar} alt="User avatar" width="48" />
+                            <p className={style.name}>{dt.name}</p>
+                        </li>
+                    ))}
+            </ul>
         </div>
     )
 }

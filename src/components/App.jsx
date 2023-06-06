@@ -14,7 +14,6 @@ const styleTest = {
   justifyContent: 'center',
   alignItems: 'center',
   color: '#010101',
-  
 }
 
 
