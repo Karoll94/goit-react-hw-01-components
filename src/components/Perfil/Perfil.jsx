@@ -2,36 +2,35 @@
 import PropTypes from 'prop-types';
 //importación de los Estilos
 import style from './Perfil.module.css'
-//Importación del Json
-// import data from '../../data/user.json';
+
 
 //Función que crea el contenedor de la tarjeta del perfil
 //y todo el marcado HTML
-export const Perfil = ({avatar}) =>{
+export const Perfil = ({username, tag, location, avatar, stats}) =>{
   return(
   <div className={style.profile}>
   <div className={style.description}>
     <img className={style.avatar}
-      src={avatar.avatar}
-      alt={avatar.tag}
+      src={avatar}
+      alt={tag}
     />
-    <p className={style.name}>{avatar.username}</p>
-    <p className={style.tag}>@{avatar.tag}</p>
-    <p className={style.location}>{avatar.location}</p>
+    <p className={style.name}>{username}</p>
+    <p className={style.tag}>@{tag}</p>
+    <p className={style.location}>{location}</p>
   </div>
 
   <ul className={style.stats}>
     <li className={style.stats_item}>
       <span className={style.label}>Followers</span>
-      <span className={style.quantity}>{avatar.stats.followers}</span>
+      <span className={style.quantity}>{stats.followers}</span>
     </li>
     <li className={style.stats_item}>
       <span className={style.label}>Views</span>
-      <span className={style.quantity}>{avatar.stats.views}</span>
+      <span className={style.quantity}>{stats.views}</span>
     </li>
     <li className={style.stats_item}>
       <span className={style.label}>Likes</span>
-      <span className={style.quantity}>{avatar.stats.likes}</span>
+      <span className={style.quantity}>{stats.likes}</span>
     </li>
   </ul>
 </div>

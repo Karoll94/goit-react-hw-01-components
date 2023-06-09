@@ -7,6 +7,8 @@ import style from './TransactionHistory.module.css';
 
 
 //Creación de la función y su marcado HTML
+//Se pasa por props la variable que contiene los atributos del
+//transaction.json
 export const TransactionHistory = ({transaction}) => {
     return(
         <div className={style.container}>
